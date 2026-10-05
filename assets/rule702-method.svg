@@ -1,0 +1,67 @@
+<svg viewBox="88 114 340 122" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rule 702 in three parts: a method gear, the facts of the case, and a solid opinion seal with a check, connected left to right and labelled method, facts, opinion">
+  <!-- glynloen-meta --><title>Rule 702: method, facts, opinion | Glynloen Insurance Consulting</title><desc>Rule 702 in three parts: a method gear, the facts of the case, and a solid opinion seal with a check, connected left to right and labelled method, facts, opinion</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>Rule 702: method, facts, opinion | Glynloen Insurance Consulting</dc:title><dc:description>Rule 702 in three parts: a method gear, the facts of the case, and a solid opinion seal with a check, connected left to right and labelled method, facts, opinion</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <radialGradient id="amb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff4df"/><stop offset="55%" stop-color="#ecbd72"/><stop offset="100%" stop-color="#d9a24e"/></radialGradient>
+    <filter id="aglow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feFlood flood-color="#d9a24e" flood-opacity=".6"/><feComposite in2="b" operator="in" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .nd{transform-box:fill-box;transform-origin:center;animation-name:pls;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes pls{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+    .ln{animation-name:twk;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes twk{0%,100%{opacity:.3}50%{opacity:1}}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 4s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}6%{opacity:.9}30%{stroke-dashoffset:0}62%{stroke-dashoffset:0;opacity:.9}75%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    @media(prefers-reduced-motion:reduce){.nd,.ln{animation:none}.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.7}}
+  </style>
+  <!-- the method: gear -->
+  <g stroke="#3fb0ec" stroke-width="1.6" opacity="0.8" fill="none" stroke-linejoin="round">
+    <polygon points="120,140 100,175 120,210 160,210 180,175 160,140"/>
+    <circle cx="140" cy="175" r="14"/>
+    <line x1="120" y1="140" x2="130" y2="163"/><line x1="100" y1="175" x2="126" y2="175"/>
+    <line x1="120" y1="210" x2="130" y2="187"/><line x1="160" y1="210" x2="150" y2="187"/>
+    <line x1="180" y1="175" x2="154" y2="175"/><line x1="160" y1="140" x2="150" y2="163"/>
+  </g>
+  <!-- applied to the facts: pages -->
+  <g stroke="#3fb0ec" stroke-width="1.5" opacity="0.8" fill="none">
+    <rect x="228" y="150" width="34" height="46" rx="3"/>
+    <rect x="240" y="142" width="34" height="46" rx="3"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.1" opacity="0.55" stroke-linecap="round">
+    <line x1="247" y1="154" x2="267" y2="154"/><line x1="247" y1="162" x2="267" y2="162"/><line x1="247" y1="170" x2="261" y2="170"/>
+  </g>
+  <!-- method applied to facts -->
+  <g stroke="#3fb0ec" stroke-width="1.45" opacity="0.62" fill="none" stroke-linecap="round">
+    <line x1="180" y1="175" x2="228" y2="172"/>
+  </g>
+  <g stroke="#57c4f2" stroke-width="2" fill="none" stroke-linecap="round">
+    <line class="drw" pathLength="100" x1="180" y1="175" x2="228" y2="172" style="animation-delay:0s"/>
+    <line class="drw" pathLength="100" x1="286" y1="170" x2="340" y2="170" style="animation-delay:.8s"/>
+    <polyline class="drw" pathLength="100" points="382,168 390,176 404,158" style="animation-delay:1.6s;stroke:#eaf7ff;stroke-width:2.6" filter="url(#glow)"/>
+  </g>
+  <!-- yields (solid arrow) -->
+  <g stroke="#eef2f6" stroke-width="3" opacity="0.95" fill="none" stroke-linecap="round">
+    <line x1="286" y1="170" x2="342" y2="170"/>
+    <polyline points="334,163 345,170 334,177"/>
+  </g>
+  <!-- the opinion: verified seal -->
+  <g stroke="#d9a24e" stroke-width="2.8" fill="none" stroke-linejoin="round" filter="url(#aglow)">
+    <polygon points="392,138 410,148 416,168 408,188 392,198 376,188 368,168 374,148"/>
+  </g>
+  <g stroke="#eaf7ff" stroke-width="2.2" opacity="0.95" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <polyline points="382,168 390,176 404,158"/>
+  </g>
+  <g fill="#3fb0ec" opacity="0.9">
+    <circle cx="120" cy="140" r="2.4"/><circle cx="100" cy="175" r="2.4"/><circle cx="120" cy="210" r="2.4"/>
+    <circle cx="160" cy="210" r="2.4"/><circle cx="160" cy="140" r="2.4"/>
+    <circle cx="262" cy="196" r="2.4"/><circle cx="228" cy="150" r="2.4"/>
+  </g>
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="nd" cx="180" cy="175" r="4.6" style="animation-duration:3.6s;animation-delay:-0.8s"/>
+    <circle class="nd" cx="274" cy="142" r="4.2" style="animation-duration:4.2s;animation-delay:-2.0s"/>
+    <circle class="nd" cx="392" cy="138" r="4.8" style="animation-duration:3.4s;animation-delay:-1.4s"/>
+  </g>
+<text x="140" y="228" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">METHOD</text><text x="251" y="214" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">FACTS</text><text x="392" y="214" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">OPINION</text><text x="258" y="126" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".24em" fill="#8fb3cf" opacity="0.7" text-anchor="middle">RULE 702</text>
+</svg>

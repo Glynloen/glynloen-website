@@ -1,0 +1,63 @@
+<svg viewBox="24 20 392 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A claim-audit score sheet for a random sample of five files: rows receiving glowing checkmarks, one file flagged with an amber X, the sheet signed off at the foot">
+  <!-- glynloen-meta --><title>Claim audit score sheet | Glynloen Insurance Consulting</title><desc>A claim-audit score sheet for a random sample of five files: rows receiving glowing checkmarks, one file flagged with an amber X, the sheet signed off at the foot</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>Claim audit score sheet | Glynloen Insurance Consulting</dc:title><dc:description>A claim-audit score sheet for a random sample of five files: rows receiving glowing checkmarks, one file flagged with an amber X, the sheet signed off at the foot</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="pageShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#04070c" flood-opacity="0.55"/></filter>
+  </defs>
+  <style>
+    .t{font-family:"Consolas","SFMono-Regular",Menlo,monospace}
+    .hd{font-size:10px;letter-spacing:.18em;fill:#6b7280;font-weight:700}
+    .cap{font-size:9px;letter-spacing:.22em;fill:#9aa3ad;font-weight:700}
+    .fid{font-size:12px;fill:#0f1319;font-weight:600}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 7s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}5%{opacity:.95}22%{stroke-dashoffset:0}75%{stroke-dashoffset:0;opacity:.95}86%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    @media(prefers-reduced-motion:reduce){.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.9}}
+  </style>
+
+  <!-- the score sheet -->
+  <rect x="34" y="28" width="372" height="284" rx="8" fill="#ffffff" filter="url(#pageShadow)"/>
+  <text class="t cap" x="58" y="58">CLAIM AUDIT &#183; SCORE SHEET</text>
+  <line x1="58" y1="68" x2="382" y2="68" stroke="#e4e7eb" stroke-width="1.4"/>
+
+  <text class="t hd" x="58" y="90">FILE</text>
+  <text class="t hd" x="150" y="90">FINDINGS</text>
+  <text class="t hd" x="342" y="90">SCORE</text>
+  <line x1="58" y1="99" x2="382" y2="99" stroke="#e4e7eb" stroke-width="1.4"/>
+
+  <!-- rows -->
+  <text class="t fid" x="58" y="126">F-0114</text>
+  <rect x="150" y="118" width="128" height="8" rx="4" fill="#cfd6dd"/>
+  <line x1="58" y1="138" x2="382" y2="138" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <text class="t fid" x="58" y="164">F-0257</text>
+  <rect x="150" y="156" width="102" height="8" rx="4" fill="#cfd6dd"/>
+  <line x1="58" y1="176" x2="382" y2="176" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <text class="t fid" x="58" y="202">F-0393</text>
+  <rect x="150" y="194" width="150" height="8" rx="4" fill="#cfd6dd"/>
+  <rect x="150" y="194" width="150" height="8" rx="4" fill="none"/>
+  <line x1="58" y1="214" x2="382" y2="214" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <text class="t fid" x="58" y="240">F-0561</text>
+  <rect x="150" y="232" width="88" height="8" rx="4" fill="#b6c2cc"/>
+  <rect x="244" y="232" width="40" height="8" rx="4" fill="#b6c2cc"/>
+  <line x1="58" y1="252" x2="382" y2="252" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <text class="t fid" x="58" y="278">F-0648</text>
+  <rect x="150" y="270" width="116" height="8" rx="4" fill="#cfd6dd"/>
+
+  <!-- scores: checks landing row by row, one flag -->
+  <g stroke="#12aaeb" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <polyline class="drw" pathLength="100" points="348,122 354,128 366,112" style="animation-delay:.3s"/>
+    <polyline class="drw" pathLength="100" points="348,160 354,166 366,150" style="animation-delay:1.1s"/>
+    <polyline class="drw" pathLength="100" points="348,198 354,204 366,188" style="animation-delay:1.9s"/>
+  </g>
+  <g stroke="#b8860b" stroke-width="2.4" fill="none" stroke-linecap="round" filter="url(#glow)">
+    <line class="drw" pathLength="100" x1="350" y1="228" x2="364" y2="242" style="animation-delay:2.7s"/>
+    <line class="drw" pathLength="100" x1="364" y1="228" x2="350" y2="242" style="animation-delay:3.0s"/>
+  </g>
+  <g stroke="#12aaeb" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <polyline class="drw" pathLength="100" points="348,274 354,280 366,264" style="animation-delay:3.6s"/>
+  </g>
+<line x1="296" y1="298" x2="340" y2="298" stroke="#0f1319" stroke-width="1.4" stroke-linecap="round"/><circle cx="352" cy="298" r="4.5" fill="#0f1319"/><text class="t cap" x="58" y="301">AUDITED &#183; RANDOM SAMPLE n = 5</text>
+</svg>

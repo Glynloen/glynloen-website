@@ -1,0 +1,68 @@
+<svg viewBox="20 20 322 138" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The policy beside the facts of the claim: thin threads match two clauses to two facts, and the controlling provision, labelled, is read across to the claim as one solid line ending in one solid mark">
+  <!-- glynloen-meta --><title>The controlling policy provision read to the claim | Glynloen Insurance Consulting</title><desc>The policy beside the facts of the claim: thin threads match two clauses to two facts, and the controlling provision, labelled, is read across to the claim as one solid line ending in one solid mark</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>The controlling policy provision read to the claim | Glynloen Insurance Consulting</dc:title><dc:description>The policy beside the facts of the claim: thin threads match two clauses to two facts, and the controlling provision, labelled, is read across to the claim as one solid line ending in one solid mark</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <radialGradient id="amb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff4df"/><stop offset="55%" stop-color="#ecbd72"/><stop offset="100%" stop-color="#d9a24e"/></radialGradient>
+    <filter id="aglow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feFlood flood-color="#d9a24e" flood-opacity=".6"/><feComposite in2="b" operator="in" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .nd{transform-box:fill-box;transform-origin:center;animation-name:pls;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes pls{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 8s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}4%{opacity:.95}18%{stroke-dashoffset:0}44%{stroke-dashoffset:0;opacity:.95}54%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    .fl{animation:flare 8s linear infinite}
+    @keyframes flare{0%,16%{opacity:.15}22%{opacity:1}44%{opacity:.85}56%,100%{opacity:.15}}
+    @media(prefers-reduced-motion:reduce){.nd{animation:none}.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.6}.fl{animation:none;opacity:.8}}
+  </style>
+
+  <!-- the policy -->
+  <g stroke="#3fb0ec" stroke-width="1.6" opacity="0.8" fill="none" stroke-linejoin="round">
+    <rect x="30" y="30" width="70" height="104" rx="4"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
+    <line x1="42" y1="44" x2="72" y2="44"/>
+    <line x1="42" y1="62" x2="88" y2="62"/>
+    <line x1="42" y1="76" x2="80" y2="76"/>
+    <line x1="42" y1="104" x2="88" y2="104"/>
+    <line x1="42" y1="118" x2="76" y2="118"/>
+  </g>
+  <g fill="#3fb0ec" opacity="0.9">
+    <circle cx="30" cy="30" r="2.3"/><circle cx="100" cy="30" r="2.3"/><circle cx="30" cy="134" r="2.3"/><circle cx="100" cy="134" r="2.3"/>
+    <circle cx="88" cy="62" r="2.6"/><circle cx="88" cy="104" r="2.6"/>
+  </g>
+
+  <!-- the facts of the claim, on their timeline -->
+  <g stroke="#3fb0ec" stroke-width="1.45" opacity="0.5" fill="none" stroke-linecap="round">
+    <line x1="290" y1="46" x2="290" y2="134"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.2" opacity="0.45" stroke-linecap="round">
+    <line x1="298" y1="62" x2="330" y2="62"/><line x1="298" y1="90" x2="322" y2="90"/><line x1="298" y1="118" x2="334" y2="118"/>
+  </g>
+  <g fill="#3fb0ec" opacity="0.9">
+    <circle cx="290" cy="46" r="2.3"/><circle cx="290" cy="134" r="2.3"/>
+  </g>
+
+  <!-- machine matches: clause to fact, drawn in turn -->
+  <g stroke="#3fb0ec" stroke-width="1.45" opacity="0.22" fill="none" stroke-linecap="round">
+    <line x1="88" y1="62" x2="290" y2="62"/>
+    <path d="M88 104C190 104 190 118 290 118"/>
+  </g>
+  <g stroke="#57c4f2" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <line class="drw" pathLength="100" x1="88" y1="62" x2="290" y2="62" style="animation-delay:0s"/>
+    <path class="drw" pathLength="100" d="M88 104C190 104 190 118 290 118" style="animation-delay:1.2s"/>
+  </g>
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="fl" cx="290" cy="62" r="4.6" style="animation-delay:0s"/>
+    <circle class="fl" cx="290" cy="118" r="4.6" style="animation-delay:1.2s"/>
+  </g>
+
+  <!-- the controlling provision, read across to the claim: one solid line, one solid mark. Never animates. -->
+  <g stroke="#eef2f6" stroke-width="2.6" opacity="0.95" fill="none" stroke-linecap="round">
+    <line x1="42" y1="90" x2="88" y2="90"/>
+    <line x1="88" y1="90" x2="290" y2="90"/>
+  </g>
+  <g fill="url(#amb)" filter="url(#aglow)"><circle class="nd" cx="290" cy="90" r="6.5" style="animation-duration:3.6s;animation-delay:-2s"/></g>
+<text x="65" y="150" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".16em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">THE POLICY</text><text x="312" y="150" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".16em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">THE CLAIM</text><text x="189" y="82" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="8" font-weight="700" letter-spacing=".16em" fill="#eef2f6" opacity="0.8" text-anchor="middle">THE CONTROLLING PROVISION</text>
+</svg>

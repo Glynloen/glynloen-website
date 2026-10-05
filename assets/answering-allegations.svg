@@ -1,0 +1,59 @@
+<svg viewBox="32 52 360 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three allegation arrows stopped at the expert's signed report, which stands between them and the client it defends">
+  <!-- glynloen-meta --><title>The expert report answering the allegations | Glynloen Insurance Consulting</title><desc>Three allegation arrows stopped at the expert's signed report, which stands between them and the client it defends</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>The expert report answering the allegations | Glynloen Insurance Consulting</dc:title><dc:description>Three allegation arrows stopped at the expert's signed report, which stands between them and the client it defends</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <radialGradient id="amb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff4df"/><stop offset="55%" stop-color="#ecbd72"/><stop offset="100%" stop-color="#d9a24e"/></radialGradient>
+    <filter id="aglow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feFlood flood-color="#d9a24e" flood-opacity=".6"/><feComposite in2="b" operator="in" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .nd{transform-box:fill-box;transform-origin:center;animation-name:pls;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes pls{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 8s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}4%{opacity:.95}16%{stroke-dashoffset:0}42%{stroke-dashoffset:0;opacity:.95}52%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    .fl{animation:flare 8s linear infinite}
+    @keyframes flare{0%,14%{opacity:.15}20%{opacity:1}42%{opacity:.85}54%,100%{opacity:.15}}
+    @media(prefers-reduced-motion:reduce){.nd{animation:none}.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.6}.fl{animation:none;opacity:.8}}
+  </style>
+
+  <!-- incoming allegations -->
+  <g stroke="#3fb0ec" stroke-width="1.45" opacity="0.22" fill="none" stroke-linecap="round">
+    <line x1="40" y1="88" x2="218" y2="88"/><line x1="40" y1="120" x2="218" y2="120"/><line x1="40" y1="152" x2="218" y2="152"/>
+  </g>
+  <g stroke="#57c4f2" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line class="drw" pathLength="100" x1="40" y1="88" x2="214" y2="88" style="animation-delay:0s"/>
+    <polyline class="drw" pathLength="100" points="204,81 214,88 204,95" style="animation-delay:.9s"/>
+    <line class="drw" pathLength="100" x1="40" y1="120" x2="214" y2="120" style="animation-delay:.5s"/>
+    <polyline class="drw" pathLength="100" points="204,113 214,120 204,127" style="animation-delay:1.4s"/>
+    <line class="drw" pathLength="100" x1="40" y1="152" x2="214" y2="152" style="animation-delay:1s"/>
+    <polyline class="drw" pathLength="100" points="204,145 214,152 204,159" style="animation-delay:1.9s"/>
+  </g>
+
+  <!-- the report, standing between -->
+  <g stroke="#eef2f6" stroke-width="2.6" opacity="0.95" fill="none" stroke-linejoin="round">
+    <rect x="232" y="62" width="56" height="116" rx="4"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.2" opacity="0.55" stroke-linecap="round">
+    <line x1="242" y1="80" x2="278" y2="80"/><line x1="242" y1="94" x2="278" y2="94"/><line x1="242" y1="108" x2="270" y2="108"/>
+    <line x1="242" y1="126" x2="278" y2="126"/><line x1="242" y1="140" x2="266" y2="140"/><line x1="242" y1="154" x2="278" y2="154"/>
+  </g>
+
+  <!-- impact flares: each allegation answered -->
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="fl" cx="226" cy="88" r="4.6" style="animation-delay:1s"/>
+    <circle class="fl" cx="226" cy="120" r="4.6" style="animation-delay:1.5s"/>
+    <circle class="fl" cx="226" cy="152" r="4.6" style="animation-delay:2s"/>
+  </g>
+
+  <!-- the professional, defended -->
+  <g stroke="#3fb0ec" stroke-width="1.6" opacity="0.8" fill="none" stroke-linejoin="round">
+    <polygon points="316,96 376,96 376,178 316,178"/>
+    <line x1="310" y1="96" x2="382" y2="96"/>
+    <line x1="330" y1="106" x2="330" y2="178"/><line x1="346" y1="106" x2="346" y2="178"/><line x1="362" y1="106" x2="362" y2="178"/>
+  </g>
+  <g fill="#3fb0ec" opacity="0.9">
+    <circle cx="316" cy="96" r="2.3"/><circle cx="376" cy="96" r="2.3"/><circle cx="316" cy="178" r="2.3"/><circle cx="376" cy="178" r="2.3"/>
+  </g>
+<line x1="242" y1="167" x2="258" y2="167" stroke="#eef2f6" stroke-width="1.5" opacity="0.9" stroke-linecap="round"/><g fill="url(#amb)" filter="url(#aglow)"><circle class="nd" cx="268" cy="167" r="6" style="animation-duration:3.6s;animation-delay:-2s"/></g><text x="127" y="195" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">ALLEGATIONS</text><text x="260" y="195" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">THE REPORT</text><text x="346" y="195" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">THE CLIENT</text>
+</svg>

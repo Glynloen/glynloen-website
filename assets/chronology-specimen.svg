@@ -1,0 +1,109 @@
+<svg viewBox="0 0 440 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A specimen chronology page: dated rows with redacted event text and CLM Bates citations, one row's citation tied by a glowing thread to its source page">
+  <!-- glynloen-meta --><title>A Bates-cited fact chronology | Glynloen Insurance Consulting</title><desc>A specimen chronology page: dated rows with redacted event text and CLM Bates citations, one row's citation tied by a glowing thread to its source page</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>A Bates-cited fact chronology | Glynloen Insurance Consulting</dc:title><dc:description>A specimen chronology page: dated rows with redacted event text and CLM Bates citations, one row's citation tied by a glowing thread to its source page</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+    <filter id="pageShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#04070c" flood-opacity="0.55"/></filter>
+  </defs>
+  <style>
+    .t{font-family:"Consolas","SFMono-Regular",Menlo,monospace}
+    .hd{font-size:10px;letter-spacing:.18em;fill:#6b7280;font-weight:700}
+    .cap{font-size:9px;letter-spacing:.22em;fill:#9aa3ad;font-weight:700}
+    .dt{font-size:12px;fill:#0f1319;font-weight:600}
+    .bates{font-size:11.5px;fill:#754d13;font-weight:700}
+    .nd{transform-box:fill-box;transform-origin:center;animation-name:pls;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes pls{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 6s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}5%{opacity:.95}30%{stroke-dashoffset:0}70%{stroke-dashoffset:0;opacity:.95}82%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    @media(prefers-reduced-motion:reduce){.nd{animation:none}.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.7}}
+  </style>
+
+  <!-- the page -->
+  <rect x="28" y="22" width="384" height="272" rx="8" fill="#ffffff" filter="url(#pageShadow)"/>
+  <text class="t cap" x="52" y="52">CLAIM CHRONOLOGY &#183; SPECIMEN</text>
+  <line x1="52" y1="62" x2="388" y2="62" stroke="#e4e7eb" stroke-width="1.4"/>
+
+  <text class="t hd" x="52" y="84">DATE</text>
+  <text class="t hd" x="128" y="84">EVENT</text>
+  <text class="t hd" x="296" y="84">SOURCE</text>
+  <line x1="52" y1="93" x2="388" y2="93" stroke="#e4e7eb" stroke-width="1.4"/>
+
+  <!-- row 1 -->
+  <text class="t dt" x="52" y="118">03/02</text>
+  <rect x="128" y="110" width="118" height="8" rx="4" fill="#cfd6dd"/>
+  <text class="t bates" x="296" y="118">CLM 000087</text>
+  <line x1="52" y1="129" x2="388" y2="129" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <!-- row 2 (highlighted, tied to source) -->
+  <rect x="40" y="134" width="360" height="30" rx="6" fill="#e8f4fb"/>
+  <text class="t dt" x="52" y="153">04/17</text>
+  <rect x="128" y="145" width="96" height="8" rx="4" fill="#b6c2cc"/>
+  <rect x="230" y="145" width="34" height="8" rx="4" fill="#b6c2cc"/>
+  <text class="t bates" x="296" y="153">CLM 000412-13</text>
+  <line x1="52" y1="169" x2="388" y2="169" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <!-- row 3 -->
+  <text class="t dt" x="52" y="192">05/09</text>
+  <rect x="128" y="184" width="140" height="8" rx="4" fill="#cfd6dd"/>
+  <text class="t bates" x="296" y="192">CLM 001206</text>
+  <line x1="52" y1="203" x2="388" y2="203" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <!-- row 4 -->
+  <text class="t dt" x="52" y="226">06/21</text>
+  <rect x="128" y="218" width="82" height="8" rx="4" fill="#cfd6dd"/>
+  <text class="t bates" x="296" y="226">CLM 002744-45</text>
+  <line x1="52" y1="237" x2="388" y2="237" stroke="#eef1f4" stroke-width="1.2"/>
+
+  <!-- row 5 -->
+  <text class="t dt" x="52" y="260">07/08</text>
+  <rect x="128" y="252" width="126" height="8" rx="4" fill="#cfd6dd"/>
+  <text class="t bates" x="296" y="260">CLM 003118</text>
+
+  <!-- thread: the highlighted cite tied to its source page -->
+  <path class="drw" pathLength="100" d="M400 149c26 0 22 60 12 96-8 30-30 52-52 68" fill="none" stroke="#57c4f2" stroke-width="1.8" stroke-linecap="round"/>
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="nd" cx="400" cy="149" r="4.6" style="animation-duration:3.6s;animation-delay:-1.2s"/>
+  </g>
+
+  <!-- companion source pages (static) -->
+  <g stroke="#3fb0ec" stroke-width="1.2" opacity="0.3" stroke-linecap="round">
+    <line x1="80" y1="296" x2="80" y2="312"/>
+    <line x1="148" y1="296" x2="148" y2="312"/>
+    <line x1="216" y1="296" x2="216" y2="312"/>
+    <line x1="284" y1="296" x2="284" y2="312"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.5" opacity="0.75" fill="none">
+    <rect x="69" y="314" width="22" height="30" rx="3"/>
+    <rect x="137" y="314" width="22" height="30" rx="3"/>
+    <rect x="205" y="314" width="22" height="30" rx="3"/>
+    <rect x="273" y="314" width="22" height="30" rx="3"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.1" opacity="0.5" stroke-linecap="round">
+    <line x1="74" y1="323" x2="86" y2="323"/><line x1="74" y1="329" x2="86" y2="329"/><line x1="74" y1="335" x2="82" y2="335"/>
+    <line x1="142" y1="323" x2="154" y2="323"/><line x1="142" y1="329" x2="154" y2="329"/><line x1="142" y1="335" x2="150" y2="335"/>
+    <line x1="210" y1="323" x2="222" y2="323"/><line x1="210" y1="329" x2="222" y2="329"/><line x1="210" y1="335" x2="218" y2="335"/>
+    <line x1="278" y1="323" x2="290" y2="323"/><line x1="278" y1="329" x2="290" y2="329"/><line x1="278" y1="335" x2="286" y2="335"/>
+  </g>
+  <g fill="#3fb0ec" opacity="0.8">
+    <circle cx="91" cy="313" r="2.2"/>
+    <circle cx="159" cy="313" r="2.2"/>
+    <circle cx="227" cy="313" r="2.2"/>
+    <circle cx="295" cy="313" r="2.2"/>
+  </g>
+  <text class="t" x="80" y="356" font-size="8.5" letter-spacing=".14em" fill="#57c4f2" opacity="0.55" text-anchor="middle">CLM 000087</text>
+  <text class="t" x="148" y="356" font-size="8.5" letter-spacing=".14em" fill="#57c4f2" opacity="0.55" text-anchor="middle">CLM 001206</text>
+  <text class="t" x="216" y="356" font-size="8.5" letter-spacing=".14em" fill="#57c4f2" opacity="0.55" text-anchor="middle">CLM 002744</text>
+  <text class="t" x="284" y="356" font-size="8.5" letter-spacing=".14em" fill="#57c4f2" opacity="0.55" text-anchor="middle">CLM 003118</text>
+
+  <!-- the source page -->
+  <g stroke="#3fb0ec" stroke-width="1.5" fill="none">
+    <rect x="344" y="314" width="22" height="30" rx="3"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.1" opacity="0.6" stroke-linecap="round">
+    <line x1="349" y1="323" x2="361" y2="323"/><line x1="349" y1="329" x2="361" y2="329"/><line x1="349" y1="335" x2="357" y2="335"/>
+  </g>
+  <text class="t" x="330" y="356" font-size="8.5" letter-spacing=".14em" fill="#57c4f2" opacity="0.85">CLM 000412</text>
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="nd" cx="360" cy="313" r="4" style="animation-duration:3.6s;animation-delay:-2.4s"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+# Glynloen Insurance Consulting
+# Decision 2026-10-01 (Janelle, for the firm): the site is to be findable by search engines
+# and by the assistant crawlers alike. Everything is allowed; the named agents are listed so
+# the decision is visible and so a future change is a deliberate edit, not an oversight.
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://glynloen.com/sitemap.xml

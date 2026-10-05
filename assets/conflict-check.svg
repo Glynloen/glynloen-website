@@ -1,0 +1,47 @@
+<svg viewBox="18 12 324 136" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four facts of a new matter, the matter name, jurisdiction, parties on all sides and hearing date, run as threads into a solid conflict-check gate; one line continues to a clear result, signed with one amber check mark: no conflict, available">
+  <!-- glynloen-meta --><title>Conflict check, Glynloen Insurance Consulting</title><desc>The four facts of a new matter, the matter name, jurisdiction, parties on all sides and hearing date, run as threads into a solid conflict-check gate; one line continues to a clear result, signed with one amber check mark: no conflict, available</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>Conflict check, Glynloen Insurance Consulting</dc:title><dc:description>The four facts of a new matter, the matter name, jurisdiction, parties on all sides and hearing date, run as threads into a solid conflict-check gate; one line continues to a clear result, signed with one amber check mark: no conflict, available</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 9s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}3%{opacity:.95}14%{stroke-dashoffset:0}46%{stroke-dashoffset:0;opacity:.95}56%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    .fl{animation:flare 9s linear infinite}
+    @keyframes flare{0%,12%{opacity:.15}18%{opacity:1}46%{opacity:.85}58%,100%{opacity:.15}}
+    .ok{stroke-dasharray:100;stroke-dashoffset:100;animation:okd 9s linear infinite}
+    @keyframes okd{0%,24%{stroke-dashoffset:100;opacity:0}25%{opacity:1}31%{stroke-dashoffset:0}50%{stroke-dashoffset:0;opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}
+    @media(prefers-reduced-motion:reduce){.drw,.ok{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.85}.fl{animation:none;opacity:.85}}
+  </style>
+  <!-- the four facts -->
+  <g stroke="#3fb0ec" stroke-width="1.4" opacity="0.7" fill="none" stroke-linejoin="round">
+    <rect x="30" y="44" width="12" height="12" rx="2"/><rect x="30" y="66" width="12" height="12" rx="2"/><rect x="30" y="88" width="12" height="12" rx="2"/><rect x="30" y="110" width="12" height="12" rx="2"/>
+  </g>
+  <g font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="7.4" font-weight="700" letter-spacing=".12em" fill="#8fb3cf" opacity="0.9">
+    <text x="50" y="53">MATTER</text><text x="50" y="75">JURISDICTION</text><text x="50" y="97">PARTIES</text><text x="50" y="119">HEARING DATE</text>
+  </g>
+  <!-- faint threads to the gate -->
+  <g stroke="#3fb0ec" stroke-width="1.45" opacity="0.22" fill="none" stroke-linecap="round">
+    <path d="M118 50C160 50 160 83 196 83"/><path d="M118 72C160 72 160 83 196 83"/><path d="M118 94C160 94 160 83 196 83"/><path d="M118 116C160 116 160 83 196 83"/>
+  </g>
+  <g stroke="#57c4f2" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path class="drw" pathLength="100" d="M118 50C160 50 160 83 196 83" style="animation-delay:0s"/>
+    <path class="drw" pathLength="100" d="M118 72C160 72 160 83 196 83" style="animation-delay:.35s"/>
+    <path class="drw" pathLength="100" d="M118 94C160 94 160 83 196 83" style="animation-delay:.7s"/>
+    <path class="drw" pathLength="100" d="M118 116C160 116 160 83 196 83" style="animation-delay:1.05s"/>
+    <path class="drw" pathLength="100" d="M196 83H262" style="animation-delay:1.6s"/>
+  </g>
+  <!-- the gate -->
+  <g stroke="#eef2f6" stroke-width="2.6" opacity="0.95" fill="none" stroke-linecap="round"><line x1="196" y1="42" x2="196" y2="128"/></g>
+  <circle cx="196" cy="34" r="6.5" fill="#eef2f6"/>
+  <!-- result -->
+  <g fill="url(#node)" filter="url(#glow)"><circle class="fl" cx="262" cy="83" r="4.6" style="animation-delay:2.1s"/></g>
+  <circle cx="300" cy="83" r="17" fill="none" stroke="#3fb0ec" stroke-width="1.4" opacity="0.55"/>
+  <path class="ok" pathLength="100" d="M291 83.5l6.5 6.5 12-14" fill="none" stroke="#d9a24e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Consolas,SFMono-Regular,Menlo,monospace" font-weight="700" letter-spacing=".16em" text-anchor="middle">
+    <text x="74" y="31" font-size="8.5" fill="#8fb3cf" opacity="0.85">FOUR FACTS</text>
+    <text x="196" y="22" font-size="8" fill="#eef2f6" opacity="0.8">CONFLICT CHECK</text>
+    <text x="300" y="56" font-size="8" fill="#d9a24e" opacity="0.95">NO CONFLICT</text>
+    <text x="300" y="118" font-size="8" fill="#d9a24e" opacity="0.95">AVAILABLE</text>
+  </g>
+</svg>

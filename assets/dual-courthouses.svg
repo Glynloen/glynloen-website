@@ -1,0 +1,75 @@
+<svg viewBox="10 46 400 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One expert's seal threading up into two courthouses labelled state and federal, with acceptance lighting at each pediment">
+  <!-- glynloen-meta --><title>One expert, state and federal courts | Glynloen Insurance Consulting</title><desc>One expert's seal threading up into two courthouses labelled state and federal, with acceptance lighting at each pediment</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>One expert, state and federal courts | Glynloen Insurance Consulting</dc:title><dc:description>One expert's seal threading up into two courthouses labelled state and federal, with acceptance lighting at each pediment</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="amberglow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.4" result="b"/><feFlood flood-color="#d9a24e" flood-opacity=".55"/><feComposite in2="b" operator="in" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .nd{transform-box:fill-box;transform-origin:center;animation-name:pls;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes pls{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 7s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}5%{opacity:.9}22%{stroke-dashoffset:0}64%{stroke-dashoffset:0;opacity:.9}76%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    .acc{animation:accb 7s linear infinite}
+    @keyframes accb{0%,20%{opacity:.15}26%{opacity:1}60%{opacity:.85}76%,100%{opacity:.15}}
+    @media(prefers-reduced-motion:reduce){.nd{animation:none}.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.7}.acc{animation:none;opacity:.8}}
+  </style>
+
+  <!-- state courthouse (left) -->
+  <g stroke="#3fb0ec" stroke-width="1.6" opacity="0.8" fill="none" stroke-linejoin="round">
+    <polygon points="45,110 120,68 195,110"/>
+    <line x1="52" y1="118" x2="188" y2="118"/>
+    <line x1="68" y1="124" x2="68" y2="210"/><line x1="103" y1="124" x2="103" y2="210"/>
+    <line x1="137" y1="124" x2="137" y2="210"/><line x1="172" y1="124" x2="172" y2="210"/>
+    <line x1="62" y1="124" x2="74" y2="124"/><line x1="97" y1="124" x2="109" y2="124"/>
+    <line x1="131" y1="124" x2="143" y2="124"/><line x1="166" y1="124" x2="178" y2="124"/>
+    <line x1="50" y1="214" x2="190" y2="214"/><line x1="42" y1="222" x2="198" y2="222"/><line x1="34" y1="230" x2="206" y2="230"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.3" opacity="0.4" fill="none">
+    <line x1="80" y1="110" x2="120" y2="80"/><line x1="160" y1="110" x2="120" y2="80"/><line x1="120" y1="80" x2="120" y2="110"/>
+  </g>
+
+  <!-- federal courthouse (right) -->
+  <g stroke="#3fb0ec" stroke-width="1.6" opacity="0.8" fill="none" stroke-linejoin="round">
+    <polygon points="225,110 300,68 375,110"/>
+    <line x1="232" y1="118" x2="368" y2="118"/>
+    <line x1="248" y1="124" x2="248" y2="210"/><line x1="283" y1="124" x2="283" y2="210"/>
+    <line x1="317" y1="124" x2="317" y2="210"/><line x1="352" y1="124" x2="352" y2="210"/>
+    <line x1="242" y1="124" x2="254" y2="124"/><line x1="277" y1="124" x2="289" y2="124"/>
+    <line x1="311" y1="124" x2="323" y2="124"/><line x1="346" y1="124" x2="358" y2="124"/>
+    <line x1="230" y1="214" x2="370" y2="214"/><line x1="222" y1="222" x2="378" y2="222"/><line x1="214" y1="230" x2="386" y2="230"/>
+  </g>
+  <g stroke="#3fb0ec" stroke-width="1.3" opacity="0.4" fill="none">
+    <line x1="260" y1="110" x2="300" y2="80"/><line x1="340" y1="110" x2="300" y2="80"/><line x1="300" y1="80" x2="300" y2="110"/>
+  </g>
+
+  <!-- vertex nodes -->
+  <g fill="#3fb0ec" opacity="0.9">
+    <circle cx="45" cy="110" r="2.4"/><circle cx="195" cy="110" r="2.4"/><circle cx="34" cy="230" r="2.4"/><circle cx="206" cy="230" r="2.4"/>
+    <circle cx="225" cy="110" r="2.4"/><circle cx="375" cy="110" r="2.4"/><circle cx="214" cy="230" r="2.4"/><circle cx="386" cy="230" r="2.4"/>
+  </g>
+
+  <!-- the expert's seal -->
+  <!-- amber accent ring (2026-09-30): the one attention mark in the drawing -->
+  <g stroke="#d9a24e" stroke-width="2.8" fill="none" stroke-linejoin="round" filter="url(#amberglow)">
+    <polygon points="210,264 224,272 229,288 223,304 210,312 197,304 191,288 196,272"/>
+  </g>
+
+  <!-- threads: one expert into both systems -->
+  <g stroke="#3fb0ec" stroke-width="1.45" opacity="0.3" fill="none" stroke-linecap="round">
+    <path d="M198 270C170 250 145 244 120 232"/>
+    <path d="M222 270C250 250 275 244 300 232"/>
+  </g>
+  <g stroke="#57c4f2" stroke-width="2" fill="none" stroke-linecap="round">
+    <path class="drw" pathLength="100" d="M198 270C170 250 145 244 120 232" style="animation-delay:.2s"/>
+    <path class="drw" pathLength="100" d="M222 270C250 250 275 244 300 232" style="animation-delay:1.7s"/>
+  </g>
+
+  <!-- acceptance lights at the pediments -->
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="acc" cx="120" cy="68" r="5.4" style="animation-delay:.2s"/>
+    <circle class="acc" cx="300" cy="68" r="5.4" style="animation-delay:1.7s"/>
+    <circle cx="210" cy="288" r="5.5" fill="#eef2f6"/>
+  </g>
+<text x="120" y="250" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700" letter-spacing=".22em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">STATE</text><text x="300" y="250" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700" letter-spacing=".22em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">FEDERAL</text><text x="210" y="322" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="8.5" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">ONE EXPERT</text>
+</svg>

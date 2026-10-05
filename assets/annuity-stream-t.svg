@@ -1,0 +1,30 @@
+<svg viewBox="18 26 330 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An annuity&#8217;s payment stream leaves the policy as a row of small nodes, crosses the carrier&#8217;s failure marked amber, and continues as one solid line to one solid mark, the promise kept">
+  <!-- glynloen-meta --><title>An annuity promise kept through a carrier failure | Glynloen Insurance Consulting</title><desc>An annuity’s payment stream leaves the policy as a row of small nodes, crosses the carrier’s failure marked amber, and continues as one solid line to one solid mark, the promise kept</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>An annuity promise kept through a carrier failure | Glynloen Insurance Consulting</dc:title><dc:description>An annuity’s payment stream leaves the policy as a row of small nodes, crosses the carrier’s failure marked amber, and continues as one solid line to one solid mark, the promise kept</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .nd{transform-box:fill-box;transform-origin:center;animation-name:pls;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+    @keyframes pls{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+    .drw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 9s linear infinite}
+    @keyframes draw{0%{stroke-dashoffset:100;opacity:0}3%{opacity:.95}14%{stroke-dashoffset:0}46%{stroke-dashoffset:0;opacity:.95}56%{opacity:0}100%{stroke-dashoffset:0;opacity:0}}
+    .fl{animation:flare 9s linear infinite}
+    @keyframes flare{0%,12%{opacity:.15}18%{opacity:1}46%{opacity:.85}58%,100%{opacity:.15}}
+    @media(prefers-reduced-motion:reduce){.nd{animation:none}.drw{animation:none;stroke-dasharray:none;stroke-dashoffset:0;opacity:.6}.fl{animation:none;opacity:.8}}
+  </style>
+<g stroke="#3fb0ec" stroke-width="1.6" opacity="0.8" fill="none" stroke-linejoin="round" stroke-linecap="round"><rect x="30" y="44" width="58" height="96" rx="4"/></g>
+<g stroke="#3fb0ec" stroke-width="1.2" opacity="0.5" stroke-linecap="round"><line x1="40" y1="62" x2="76" y2="62"/><line x1="40" y1="76" x2="78" y2="76"/><line x1="40" y1="90" x2="66" y2="90"/><line x1="40" y1="104" x2="76" y2="104"/><line x1="40" y1="118" x2="70" y2="118"/></g>
+<g fill="#3fb0ec" opacity="0.9"><circle cx="30" cy="44" r="2.3"/><circle cx="88" cy="44" r="2.3"/><circle cx="30" cy="140" r="2.3"/><circle cx="88" cy="140" r="2.3"/></g>
+<g stroke="#3fb0ec" stroke-width="1.45" opacity="0.5" fill="none" stroke-linecap="round"><line x1="88" y1="92" x2="206" y2="92"/></g>
+<g stroke="#57c4f2" stroke-width="2.2" fill="none" stroke-linecap="round"><line class="drw" pathLength="100" x1="88" y1="92" x2="206" y2="92" style="animation-delay:0s"/></g>
+<g fill="url(#node)" filter="url(#glow)"><circle class="fl" cx="104" cy="92" r="4" style="animation-delay:0.0s"/><circle class="fl" cx="122" cy="92" r="4" style="animation-delay:0.3s"/><circle class="fl" cx="140" cy="92" r="4" style="animation-delay:0.6s"/><circle class="fl" cx="158" cy="92" r="4" style="animation-delay:0.9s"/><circle class="fl" cx="176" cy="92" r="4" style="animation-delay:1.2s"/><circle class="fl" cx="194" cy="92" r="4" style="animation-delay:1.5s"/></g>
+<g stroke="#d9a24e" stroke-width="2.2" opacity="0.95" stroke-linecap="round"><line x1="214" y1="81" x2="214" y2="103"/><line x1="221" y1="81" x2="221" y2="103"/></g>
+<g stroke="#eef2f6" stroke-width="2.8" opacity="0.95" fill="none" stroke-linecap="round"><line x1="229" y1="92" x2="324" y2="92"/><line x1="244" y1="86" x2="244" y2="98"/><line x1="262" y1="86" x2="262" y2="98"/><line x1="280" y1="86" x2="280" y2="98"/><line x1="298" y1="86" x2="298" y2="98"/><line x1="316" y1="86" x2="316" y2="98"/></g>
+<circle cx="332" cy="92" r="7" fill="#eef2f6"/>
+<g stroke="#3fb0ec" stroke-width="1.2" opacity="0.45" fill="none" stroke-linecap="round"><line x1="104" y1="150" x2="332" y2="150"/><line x1="104" y1="146" x2="104" y2="154"/><line x1="161" y1="146" x2="161" y2="154"/><line x1="218" y1="146" x2="218" y2="154"/><line x1="275" y1="146" x2="275" y2="154"/><line x1="332" y1="146" x2="332" y2="154"/></g>
+<text x="59" y="158" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".16em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">THE POLICY</text>
+<text x="155" y="118" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".16em" fill="#8fb3cf" opacity="0.85" text-anchor="middle">PAYMENTS</text>
+<text x="217" y="66" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".16em" fill="#d9a24e" opacity="0.95" text-anchor="middle">CARRIER FAILS</text>
+<text x="280" y="120" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="10" font-weight="700" letter-spacing=".16em" fill="#eef2f6" opacity="0.8" text-anchor="middle">PROMISE KEPT</text>
+</svg>

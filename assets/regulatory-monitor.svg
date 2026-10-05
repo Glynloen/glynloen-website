@@ -1,0 +1,45 @@
+<svg viewBox="20 40 360 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An early-warning monitor: a steady compliance baseline with one anomaly spike, flagged amber the moment it appears, and a solid response mark at the end of the trace">
+  <!-- glynloen-meta --><title>Regulatory compliance monitoring | Glynloen Insurance Consulting</title><desc>An early-warning monitor: a steady compliance baseline with one anomaly spike, flagged amber the moment it appears, and a solid response mark at the end of the trace</desc><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:title>Regulatory compliance monitoring | Glynloen Insurance Consulting</dc:title><dc:description>An early-warning monitor: a steady compliance baseline with one anomaly spike, flagged amber the moment it appears, and a solid response mark at the end of the trace</dc:description><dc:creator>Glynloen Insurance Consulting</dc:creator><dc:publisher>Glynloen Insurance Consulting</dc:publisher><dc:rights>© 2026 Glynloen Insurance Consulting. All rights reserved.</dc:rights><dc:source>https://glynloen.com/</dc:source></rdf:Description></rdf:RDF></metadata><!-- /glynloen-meta -->
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eaf7ff"/><stop offset="55%" stop-color="#57c4f2"/><stop offset="100%" stop-color="#12aaeb"/></radialGradient>
+  </defs>
+  <style>
+    .trace{stroke-dasharray:70 530;animation:travel 10s linear infinite}
+    @keyframes travel{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+    .blip{animation:bl 10s linear infinite}
+    @keyframes bl{0%,44%{opacity:.15}48%{opacity:1}62%{opacity:.9}80%{opacity:.3}100%{opacity:.15}}
+    .flag{animation:fl 10s linear infinite}
+    @keyframes fl{0%,46%{opacity:0}50%{opacity:1}78%{opacity:.85}92%,100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){.trace{animation:none;stroke-dasharray:none;opacity:.9}.blip{animation:none;opacity:.85}.flag{animation:none;opacity:.8}}
+  </style>
+
+  <!-- monitor grid -->
+  <g stroke="#3fb0ec" stroke-width="1" opacity="0.12">
+    <line x1="70" y1="52" x2="70" y2="228"/><line x1="110" y1="52" x2="110" y2="228"/><line x1="150" y1="52" x2="150" y2="228"/>
+    <line x1="190" y1="52" x2="190" y2="228"/><line x1="230" y1="52" x2="230" y2="228"/><line x1="270" y1="52" x2="270" y2="228"/>
+    <line x1="310" y1="52" x2="310" y2="228"/><line x1="350" y1="52" x2="350" y2="228"/>
+    <line x1="30" y1="70" x2="370" y2="70"/><line x1="30" y1="110" x2="370" y2="110"/>
+    <line x1="30" y1="190" x2="370" y2="190"/><line x1="30" y1="228" x2="370" y2="228"/>
+  </g>
+  <line x1="30" y1="150" x2="370" y2="150" stroke="#3fb0ec" stroke-width="1.1" opacity="0.3"/>
+
+  <!-- the caught anomaly: drop line + marker -->
+  <line x1="225" y1="84" x2="225" y2="150" stroke="#3fb0ec" stroke-width="1" opacity="0.25" stroke-dasharray="3 4"/>
+  <g class="flag" stroke="#d9a24e" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="225,58 220,66 230,66" fill="#d9a24e" stroke="none"/>
+    <line x1="212" y1="74" x2="218" y2="74"/><line x1="232" y1="74" x2="238" y2="74"/>
+  </g>
+
+  <!-- the trace: dim base + traveling bright pulse -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="30,150 70,150 85,138 100,150 140,150 150,158 160,150 200,150 215,150 225,80 235,196 245,150 285,150 295,142 305,150 345,150 370,150" stroke="#3fb0ec" stroke-width="1.6" opacity="0.35"/>
+    <polyline class="trace" pathLength="600" points="30,150 70,150 85,138 100,150 140,150 150,158 160,150 200,150 215,150 225,80 235,196 245,150 285,150 295,142 305,150 345,150 370,150" stroke="#eaf7ff" stroke-width="2.2" filter="url(#glow)"/>
+  </g>
+
+  <!-- spike marker -->
+  <g fill="url(#node)" filter="url(#glow)">
+    <circle class="blip" cx="225" cy="80" r="5.4"/>
+  </g>
+<text x="34" y="164" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="8.5" font-weight="700" letter-spacing=".18em" fill="#8fb3cf" opacity="0.85" text-anchor="start">COMPLIANCE BASELINE</text><text x="242" y="68" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="9" font-weight="700" letter-spacing=".18em" fill="#d9a24e" opacity="0.95" text-anchor="start">FLAGGED</text><circle cx="370" cy="150" r="5" fill="#eef2f6"/><text x="366" y="170" font-family="Consolas,SFMono-Regular,Menlo,monospace" font-size="8.5" font-weight="700" letter-spacing=".18em" fill="#eef2f6" opacity="0.75" text-anchor="end">RESPONSE</text>
+</svg>
