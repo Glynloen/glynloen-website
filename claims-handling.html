@@ -539,7 +539,7 @@
 <script>
   /* Constellation standard (2026-08-19): dark surface recipe: #57c4f2, density 12000, opacity .55 (CSS). Zaps are hero-only. */
   var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  function network(canvas,color,density,zap,base){base=base||1;
+  function network(canvas,color,density,zap,base){if(!window.__netGo){(window.__netQ=window.__netQ||[]).push([canvas,color,density,zap,base]);return;}base=base||1;
     if(!canvas)return;var ctx=canvas.getContext('2d');var w,h,dpr,pts=[],zaps=[],fl=[],raf,running=true;
     function size(){dpr=Math.min(devicePixelRatio||1,2);var r=canvas.getBoundingClientRect();w=r.width;h=r.height;if(!w||!h)return;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);var n=Math.round(w*h/density);pts=[];for(var i=0;i<n;i++){pts.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.75,vy:(Math.random()-.5)*.75});}}
     function frame(){ctx.clearRect(0,0,w,h);var i,j;for(i=0;i<pts.length;i++){var p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;}
@@ -582,6 +582,7 @@
   document.querySelectorAll('.bnet').forEach(function(c){network(c,'#0e83c0',12000);});
 </script>
 <script id="rhythm-js">(function(){var s=document.querySelectorAll("section");for(var i=1;i<s.length;i++){var a=s[i-1],b=s[i];if(a.nextElementSibling!==b)continue;if(/\b(hero|phead|stats|backcta)\b/.test(a.className+" "+b.className))continue;var x=getComputedStyle(a),y=getComputedStyle(b);if(x.backgroundColor===y.backgroundColor&&x.backgroundImage==="none"&&y.backgroundImage==="none")b.classList.add("rjoin");}})();</script>
+<script id="net-defer">addEventListener('load',function(){setTimeout(function(){window.__netGo=1;(window.__netQ||[]).forEach(function(a){network.apply(null,a)});window.__netQ=[]},600)});</script>
 <script id="search-js" src="assets/search.js" defer></script>
 <script id="ga4-events" src="assets/analytics.js" defer></script>
 </body>
