@@ -12,20 +12,34 @@
   var TRY = ["bad faith", "appraisal", "business interruption", "receivership", "reinsurance", "case-mapping"];
   var STOP = { a: 1, an: 1, and: 1, the: 1, of: 1, in: 1, on: 1, to: 1, for: 1, or: 1, by: 1, with: 1, at: 1, is: 1, are: 1, be: 1 };
   var data = null, loading = null, dlg, input, body, foot, opener, active = -1, timer;
+  var ALIAS = [];  // search-term list from the index (tools/site_search.py SYNONYMS), longest phrases first
 
+  // Lower case, no accents or apostrophes. Short ampersand abbreviations become one word
+  // ("E&O" -> "eando", "P&C" -> "pandc") so they never split into single letters.
   function norm(s) {
     return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()
-      .replace(/[‘’']/g, "").replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+      .replace(/[‘’']/g, "")
+      .replace(/\b([a-z])\s*&\s*([a-z])\b/g, "$1and$2")
+      .replace(/\b([a-z]{2,3})&([a-z]{2,3})\b/g, "$1and$2")
+      .replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
   }
-  function terms(q) {
-    return norm(q).split(" ").filter(function (w) { return w && !STOP[w]; })
-      .map(function (w) { return w.length > 4 && /[^s]s$/.test(w) ? w.slice(0, -1) : w; });
-  }
+  function stem(w) { return w.length > 4 && /[^s]s$/.test(w) ? w.slice(0, -1) : w; }
+  function sing(w) { return w.length > 3 && /s$/.test(w) ? w.replace(/(es|s)$/, "") : w; }
   function esc(s) {
     return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
   }
-  // A term matches at the start of a word, so "audit" finds "audits" and "auditing".
-  function has(text, t) { return (" " + text).indexOf(" " + t) !== -1; }
+  // A typed word matches at the start of a word ("audit" finds "audits", "auditing");
+  // three letters or fewer must match a whole word ("BI" no longer finds "billing").
+  function hasTerm(text, t) {
+    if (t.length > 3) return (" " + text).indexOf(" " + t) !== -1;
+    var T = " " + text + " ";
+    return T.indexOf(" " + t + " ") !== -1 || T.indexOf(" " + t + "s ") !== -1;
+  }
+  // A listed term or phrase matches whole words, plural allowed.
+  function hasPhrase(text, p) {
+    var T = " " + text + " ";
+    return T.indexOf(" " + p + " ") !== -1 || T.indexOf(" " + p + "s ") !== -1 || T.indexOf(" " + p + "es ") !== -1;
+  }
 
   function prepare(d) {
     d.pages.forEach(function (p) {
@@ -36,6 +50,15 @@
         s.nb = s.b.map(norm);
       });
     });
+    (d.syn || []).forEach(function (g) {
+      var alts = g.a.concat(g.t || []), raw = alts.slice();
+      var nalts = alts.map(norm).filter(function (x, i, a) { return x && a.indexOf(x) === i; });
+      g.a.forEach(function (from) {
+        var toks = norm(from).split(" ").filter(Boolean);
+        if (toks.length) ALIAS.push({ toks: toks, alts: nalts, raw: raw });
+      });
+    });
+    ALIAS.sort(function (x, y) { return y.toks.length - x.toks.length; });
     return d;
   }
   function load() {
@@ -49,31 +72,62 @@
     return loading;
   }
 
+  // The query becomes a list of concepts. A concept is either one typed word, or a phrase from the
+  // search-term list together with all its equivalents. Every concept must be found on a page.
+  function parse(q) {
+    var toks = norm(q).split(" ").filter(Boolean), out = [], i = 0;
+    while (i < toks.length) {
+      var hit = null;
+      for (var k = 0; k < ALIAS.length && !hit; k++) {
+        var a = ALIAS[k], n = a.toks.length;
+        if (i + n > toks.length) continue;
+        var ok = true;
+        for (var j = 0; j < n && ok; j++) ok = sing(toks[i + j]) === sing(a.toks[j]);
+        if (ok) hit = a;
+      }
+      if (hit) {
+        out.push({ typed: toks.slice(i, i + hit.toks.length).join(" "), alts: hit.alts, raw: hit.raw });
+        i += hit.toks.length;
+      } else {
+        var w = toks[i++];
+        if (!STOP[w]) out.push({ term: stem(w) });
+      }
+    }
+    return out;
+  }
+  // 1 = the words typed are on this text; .85 = only an equivalent is; 0 = neither.
+  function factor(text, c) {
+    if (!c.alts) return hasTerm(text, c.term) ? 1 : 0;
+    if (hasPhrase(text, c.typed)) return 1;
+    for (var i = 0; i < c.alts.length; i++) if (hasPhrase(text, c.alts[i])) return 0.85;
+    return 0;
+  }
+
   // Score: title or main heading 3, description or section heading 2, text 1 (the search-term audit's
-  // weights), plus a little for each extra mention. Every word must appear somewhere on the page.
+  // weights), plus a little for each extra mention. Every concept must appear somewhere on the page.
   function search(q) {
-    var ts = terms(q);
-    if (!ts.length) return [];
+    var cs = parse(q);
+    if (!cs.length) return [];
     var phrase = norm(q), out = [];
     data.pages.forEach(function (p) {
       var score = 0, best = null, bestHits = -1;
-      for (var i = 0; i < ts.length; i++) {
-        var t = ts[i], w = 0, n = 0;
-        if (has(p.nt, t)) w = 3;
-        else if (has(p.nd, t)) w = 2;
+      for (var i = 0; i < cs.length; i++) {
+        var c = cs[i], w = 3 * factor(p.nt, c), n = 0;
+        w = Math.max(w, 2 * factor(p.nd, c));
         p.s.forEach(function (s) {
-          if (has(s.nh, t)) { w = Math.max(w, 2); n++; }
-          s.nb.forEach(function (b) { if (has(b, t)) { w = Math.max(w, 1); n++; } });
+          var f = factor(s.nh, c);
+          if (f) { w = Math.max(w, 2 * f); n++; }
+          s.nb.forEach(function (b) { var g = factor(b, c); if (g) { w = Math.max(w, g); n++; } });
         });
         if (!w) return;
         score += w + Math.min(n, 10) * 0.1;
       }
-      if (ts.length > 1 && (has(p.nt, phrase) || has(p.nd, phrase))) score += 2;
+      if (cs.length > 1 && (hasTerm(p.nt, phrase) || hasTerm(p.nd, phrase))) score += 2;
       p.s.forEach(function (s) {
         s.nb.forEach(function (b, k) {
           var hits = 0;
-          ts.forEach(function (t) { if (has(b, t)) hits++; });
-          if (ts.length > 1 && has(b, phrase)) hits += 1;
+          cs.forEach(function (c) { if (factor(b, c)) hits++; });
+          if (cs.length > 1 && hasTerm(b, phrase)) hits += 1;
           if (hits > bestHits || (hits === bestHits && hits && s.b[k].length > 60 && best && best.text.length <= 60)) {
             bestHits = hits; best = { sec: s, text: s.b[k] };
           }
@@ -85,18 +139,35 @@
     return out.slice(0, 12);
   }
 
-  function snippet(text, ts) {
-    var low = text.toLowerCase(), at = -1;
-    ts.forEach(function (t) { var i = low.indexOf(t); if (i !== -1 && (at === -1 || i < at)) at = i; });
-    var s = text;
-    if (text.length > 190) {
-      var from = Math.max(0, at - 70);
-      if (from > 0) from = text.indexOf(" ", from) + 1;
-      s = (from > 0 ? "…" : "") + text.slice(from, from + 180).replace(/\s\S*$/, "") + (from + 180 < text.length ? "…" : "");
+  // One pattern that finds, in the original page text, every word a result matched on.
+  function marker(cs) {
+    var parts = [];
+    function rx(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s*&\s*/g, "\\s*&\\s*").replace(/[\s-]+/g, "[\\s\\-]+");
     }
-    s = esc(s);
-    var words = ts.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|");
-    return words ? s.replace(new RegExp("\\b(" + words + ")[\\w’'-]*", "gi"), "<mark>$&</mark>") : s;
+    cs.forEach(function (c) {
+      if (!c.alts) parts.push(rx(c.term) + (c.term.length > 3 ? "[\\w’'-]*" : "(?:e?s)?\\b"));
+      else c.raw.forEach(function (r) { parts.push(rx(r) + "(?:e?s)?\\b"); });
+    });
+    return parts.length ? new RegExp("\\b(?:" + parts.join("|") + ")", "gi") : null;
+  }
+  function snippet(text, cs) {
+    var re = marker(cs), at = -1, m;
+    if (re) { m = re.exec(text); if (m) at = m.index; re.lastIndex = 0; }
+    var from = 0, s = text;
+    if (text.length > 190) {
+      from = Math.max(0, at - 70);
+      if (from > 0) from = text.indexOf(" ", from) + 1;
+      s = text.slice(from, from + 180).replace(/\s\S*$/, "");
+    }
+    var html = "", last = 0;
+    if (re) while ((m = re.exec(s))) {
+      if (!m[0]) { re.lastIndex++; continue; }
+      html += esc(s.slice(last, m.index)) + "<mark>" + esc(m[0]) + "</mark>";
+      last = m.index + m[0].length;
+    }
+    html += esc(s.slice(last));
+    return (from > 0 ? "…" : "") + html + (text.length > 190 && from + 180 < text.length ? "…" : "");
   }
 
   function render() {
@@ -108,7 +179,7 @@
       foot.textContent = "";
       return;
     }
-    var res = search(q), ts = terms(q);
+    var res = search(q), cs = parse(q);
     if (!res.length) {
       body.innerHTML = '<p class="srch-note" role="status">No pages match “' + esc(q) + '”. Try a broader word, or ' +
         '<a href="' + root + 'index.html#contact">get in touch</a> and ask us directly.</p>';
@@ -119,7 +190,7 @@
       '<ul class="srch-res">' + res.map(function (r) {
         var href = root + (r.p.u || "index.html") + (r.best && r.best.sec.id ? "#" + r.best.sec.id : "");
         var h = r.best && r.best.sec.h && r.best.sec.h !== r.p.h1 ? '<span class="h">' + esc(r.best.sec.h) + "</span>" : "";
-        var s = r.best ? snippet(r.best.text, ts) : esc(r.p.d);
+        var s = r.best ? snippet(r.best.text, cs) : esc(r.p.d);
         return '<li><a href="' + esc(href) + '"><span class="t">' + esc(r.p.t) + "</span>" + h + '<span class="s">' + s + "</span></a></li>";
       }).join("") + "</ul>";
     foot.textContent = "Use the arrow keys to move, Enter to open, Esc to close.";
